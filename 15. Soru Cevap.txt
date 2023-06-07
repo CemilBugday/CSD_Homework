@@ -1,0 +1,29 @@
+#include<stdlib.h>
+
+int max4(int a, int b, int c, int d)
+{
+	int max = a;
+
+	if (b > max)
+		max = b;
+
+	if (c > max)
+		max = c;
+
+	if (d > max)
+		max = d;
+
+	return max;
+}
+int main(void)
+{
+	int x, y, z, t;
+
+	printf("dort tamsayi girin:");
+	scanf("%d%d%d%d", &x, &y, &z, &t);
+
+	printf("%d, %d, %d ve %d sayilarinin en buyugu %d", x, y, z, t, max4(x, y, z, t));
+
+
+
+}

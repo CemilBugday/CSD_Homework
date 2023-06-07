@@ -1,0 +1,26 @@
+#### Aşağıdaki C programı çalıştırıldığında bu programın çıktısı ne olur?
+
+```
+#include <stdio.h>
+
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 10;
+	int y = 20;
+
+	int a = x+++y;
+	
+	printf("%d\n", a);
+	printf("%d\n", x);
+	printf("%d\n", y);
+}
+```
+
+__Sorunun yanıtı şu seçeneklerden biri de olabilir:__</br>
++ Sentaks hatası (derleme zamanı hatası)
++ Tanımsız davranış. _(undefined behavior)_
++ Derleyiciye göre değişir. _(unspecified behavior / implementation defined)_
+
+[Ödevin Cevabı](https://www.youtube.com/watch?v=Xg3Gx5Uj7Mc)

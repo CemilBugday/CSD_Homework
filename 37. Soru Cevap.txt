@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 1;
+
+	if (++x > 2, 5) // x önce artırılır. x = 2. Büyüktür işareti virgül operatöründen önceliklidir. virgül operatörünün sağ kısmı işleme alınır.
+		printf("%d", ++x); // True kısmına girer. x = 3 olur.
+	else
+		printf("%d", x++);
+}

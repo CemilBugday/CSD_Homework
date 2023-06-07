@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+    int number, originalNumber, remainder, result = 0, n = 0;
+
+    for (number = 1e8; number <= 1e9 - 1; ++number) {
+        originalNumber = number;
+
+        // Basamak sayısını bulma
+        while (originalNumber != 0) {
+            originalNumber /= 10;
+            ++n;
+        }
+
+        originalNumber = number;
+
+        // Armstrong sayısını hesaplama
+        while (originalNumber != 0) {
+            remainder = originalNumber % 10;
+            result += pow(remainder, n);
+            originalNumber /= 10;
+        }
+
+        // Armstrong sayısını kontrol etme
+        if (result == number) {
+            printf("En buyuk 9 basamakli Armstrong sayisi: %d\n", number);
+            break;
+        }
+
+        // Değerleri sıfırlama
+        n = 0;
+        result = 0;
+    }
+
+    return 0;
+}

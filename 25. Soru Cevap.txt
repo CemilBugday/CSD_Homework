@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 1;  // x = 1 initialize edilmiş.
+
+	if (++x > 2, 5) // x'in degeri artırılır, 2 < 2 ifadesi lojik açıdan yanlış olur fakat virgül operatörü sağ operandın değerini üretir.
+		printf("%d", ++x); // if koşul ifadesi lojik açıdan doğru olduğu için x = 3 olur.
+	else
+		printf("%d", x++);
+}
+
+

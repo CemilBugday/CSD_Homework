@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int a = 11;
+
+	if (10 < --a < 20) // always True olur. Yan etkiden dolayı  a = 10 olur.
+		printf("%d", --a); // a = 9;
+	else
+		printf("%d", ++a);
+}

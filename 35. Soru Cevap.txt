@@ -1,0 +1,14 @@
+Aşağıdaki C programı çalıştırıldığında bu programın çıktısı ne olur?
+
+```
+#include <stdio.h>
+ 
+int main(void)
+{
+	int ival = 3;
+	printf("%d", ival++ + ++ival);
+}
+```
+
+Bu kodun çıktısı tanımsız davranış olur. Çünkü ifade içinde nesne bir yan etkiye maruz kalmışsa bir sequence point'ten
+önce o nesneyi tekrar kullanırsak davranış oluyor.

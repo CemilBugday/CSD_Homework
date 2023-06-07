@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void func(int x)
+{
+	++x;
+	printf("%d", x); // ilk başta ekranda 12 yi görürüz.x yeni değerine kavuşur x = 11 olur.
+						// x in değerini ikinci fonsiyonda 12 değerini basar. x = 12 olur
+}
+
+int main(void)
+{
+	int x = 10;
+
+	func(++x);
+	func(x++);
+
+	printf("%d", x); // 12
+}

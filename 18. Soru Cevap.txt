@@ -1,0 +1,2 @@
+Burda --x ile ++y de sequence point olur yani değeri kalıcı değişir.
+x = 0 olur z = 0 y de 0 olur

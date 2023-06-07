@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x, y, z;
+
+	printf("uc tamsayi giriniz: ");
+	scanf("%d%d%d", &x, &y, &z);
+
+	
+
+	// Sayıları küçükten büyüğe sıralamak için bubble sort algoritmasını kullanabiliriz
+	if (x > y) {
+		int temp = x;
+		x = y;
+		y = temp;
+	}
+	if (x > z) {
+		int temp = x;
+		x = z;
+		z = temp;
+	}
+	if (y > z) {
+		int temp = y;
+		y = z;
+		z = temp;
+	}
+
+	if (x == y && y == z) {
+		printf("%d = %d = %d\n", x, y, z);
+	}
+	else if (x == y) {
+		printf("%d = %d < %d\n", x, y, z);
+	}
+	else if (y == z) {
+		printf("%d < %d = %d\n", x, y, z);
+	}
+	else {
+		printf("%d < %d < %d\n", x, y, z);
+	}
+
+	return 0;
+}

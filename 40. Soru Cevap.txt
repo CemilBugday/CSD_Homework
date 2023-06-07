@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 0;
+
+	while (x < 10) {
+		if (x % 2 == 0) {
+			printf("%d ", x); // 0 , x = 5 olur.				/* 0 4 4 10    */
+			++x; // x = 1 olur.
+		}
+		if (x % 3 != 0) {
+			x += 2; // x = 3 olur. x = 7 oldu. x = 9 oldu.
+		}
+		else {
+			++x; // x = 4 x = 10 olur.
+			printf("%d ", x);
+		}
+	}
+}

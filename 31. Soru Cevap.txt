@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main(void)
+{
+	double d = 0.;
+	int i;
+
+	for (i = 0; i < 10; i++)
+		d += .1;
+
+	printf("%.20f", d); //Formatlama yaparken %.20f yapınca 0.9999... çıkarıyor sonucu. Formatlama şekliyle alakalı muhtemelen.
+		//Virgüllü sayılar bilgisayarda tamı tamına tutulamaz. Virgüllü sayılarda mutlak bir yuvarlama hatası olur. 
+		//O yüzden virgüllü sayılar karşılaştırılırken == ile karşılaştırmak doğru olmaz.
+
+	if (d == 1.)
+		printf("d, 1. degerinde\n");
+	else
+		printf("d, 1. degerinde degil\n");
+
+	return 0;
+}
+	

@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 4;
+	int y = 10;
+
+	printf("%d\n", (x++, ++x)); //Virgül operandı sol operand önce yapılıyor yan etki sağ operanda yansıyor. Bu kodun daha anlaşılması için 
+	printf("%d\n", (y *= x++, y + x)); // Aşağıya bir kod daha yazacağım. Ayrıca virgül operandı sağ operandın değerini üretir.
+										//x = 6 oldu. (y = y * x++, y + x) y = 60 olur -> x burda sequnce point olur ve x = 7 olur çıktı 67 olur
+}
+
+/*
+int x = 4;
+int y = 4;
+
+printf("%d", (x++, ++x);
+printf("%d", (++y, y++);
+
+Bu kodda y nin değeri 5 çıkar çünkü önce sol operandın işlemi yapılır y 1 artırılır. Fakat sonra diğerinde nesnenin kendi değeri
+üretilir.
+*/

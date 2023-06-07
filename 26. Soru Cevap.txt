@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void func(int x)
+{
+	++x; //x = 12 olur
+	printf("%d ", x); // 12 // 2. fonsiyonda dolayı tekrar 12 basar
+}
+
+int main(void)
+{
+	int x = 10; // fonksiyon ilk burda başlar x = 10
+
+	func(++x); // x = 11 olur.
+	func(x++); // x = in değeri kalıcı olarak 12 olmaz 11 olur.
+
+	printf("%d ", x); // 12
+}

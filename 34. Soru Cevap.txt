@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x, y, z, t;
+	 
+	x = y = z = t = 1; 
+	x = ++y > 1 || z++ > 1 && ++t > 1; // önce ++ işareti yapılır.  y = 2, z = 1 ve t = 1 olur. Çünkü short circuit olur.
+															
+	printf("%d%d%d%d", x, y, z, t);  // x = 1, y = 2, z = 1, t = 1
+
+	return 0;
+}

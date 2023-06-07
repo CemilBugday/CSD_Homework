@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 5;
+
+	while (x--); // noktalı virgül var yani printf döngüye girmez.
+	printf("%d ", x); // -1
+}

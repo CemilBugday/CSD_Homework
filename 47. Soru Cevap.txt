@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+unsigned int display_collatz(unsigned long long val) {
+    unsigned int count = 0;
+
+    printf("%llu ", val);
+    count++;
+
+    while (val != 1) {
+        if (val % 2 == 0) {
+            val /= 2;
+        }
+        else {
+            val = 3 * val + 1;
+        }
+
+        printf("%llu ", val);
+        count++;
+    }
+
+    return count;
+}
+
+int main(void) {
+    unsigned long long number;
+    printf("Bir tamsayi giriniz: ");
+    scanf("%llu", &number);
+
+    unsigned int count = display_collatz(number);
+    printf("\nToplam %u sayi yazildi.\n", count);
+
+    return 0;
+}

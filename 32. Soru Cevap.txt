@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+#include <stdio.h>
+
+int main(void)
+{
+	int x = 10;
+	int y = 20;
+
+	int a = x++ + y; // nesne kendi değerini üretir sonra sequence point oluşur. 10 + 20 = 30 --> a = 30, x = 11
+
+	printf("%d\n", a); // 30
+	printf("%d\n", x); // 11
+	printf("%d\n", y); // 20
+}

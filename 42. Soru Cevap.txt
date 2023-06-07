@@ -1,0 +1,26 @@
+
+
+#include<stdio.h>
+
+int main(void)
+{
+	int num = 30;
+	int ival = (num > 5 ? num <= 10 ? 10 : 20 : 50); // Ternary operatörü sağdan sola önceliklidir.Önce num <= 10 ? 10 : 20 yapılır.
+													// Burdan sonra num > 5 ? 20 : 50 den de 20 gelir.			
+
+		printf("%d\n", ival);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+
+#include <stdio.h>
+
+int g = 3;
+
+int f1(int x)
+{
+	return x * g++; // g = 3 yani nesne kendi değerini üretir. 9 üretir. g sequnce pointten dolayı  g = 4 olur.
+					// 30 * 6 = 180
+}
+
+int f2(int x)
+{
+	return x * ++g; // 9 * 5 = 45 olur. g = 5 olur.
+					// 5 * 6 = 30. g = 6 olur.
+}
+
+
+int main(void)
+{
+	printf("%d\n", f2(f1(g))); // 45  
+	printf("%d\n", f1(f2(g))); // 180
+}
+

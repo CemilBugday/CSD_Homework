@@ -1,0 +1,51 @@
+#include<stdlib.h>
+
+int max3(int a, int b, int c)
+{
+	int max = a;
+
+	if (b > max)
+		max = b;
+
+	if (c > max)
+		max = c;
+
+	return max;
+}
+int main(void)
+{
+	int x, y, z;
+
+	printf("uc tamsayi girin:");
+	scanf("%d%d%d", &x, &y, &z);
+
+	printf("%d, %d ve %d sayilarinin en buyugu %d", x, y, z, max3(x, y, z));
+
+
+
+}
+
+===========================================================================
+
+#include<stdlib.h>
+
+double max3(double a, double b, double c)
+{
+	double max = a;
+
+	if (b > max)
+		max = b;
+
+	if (c > max)
+		max = c;
+
+	return max;
+}
+int main(void)
+{
+	double x, y, z;
+
+	printf("uc gercek sayi girin:");
+	scanf("%lf%lf%lf", &x, &y, &z);
+
+	printf("%lf, %lf ve %lf sayilarinin en buyugu %lf", x, y, z, max3(x, y, z));

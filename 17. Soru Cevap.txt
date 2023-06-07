@@ -1,0 +1,4 @@
+printf fonksiyonu ilk başta sayıyı basar sonrasında karakter sayısı int olarak geri dönüş değeri verir.
+
+Output:
+33331 olur

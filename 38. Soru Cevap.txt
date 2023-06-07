@@ -1,0 +1,49 @@
+
+double foo(void);
+void bar(double);
+
+int main(void)
+{
+	double dval = foo();
+
+	if (dval > 3, 4) //Koşul always true.DOlayısıyla dval in değerinin ne olduğundan bağımsız olarak bar fonksiyonu çağırılacak.Kodlama hatası bu. 
+		bar(dval);
+}
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+double foo(void);
+void bar(double);
+
+int main(void)
+{
+	double dval = foo();
+
+	if (dval > 4.5); //noktalı virgül olmasaydı dval in değeri 4.5 ten büyük olsaydı bar fonksiyonu çağıralacaktı.bar fonksiyonun 
+	bar(dval);		// if ile hiçbir bağlantısı olmayacak.
+}
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+int func(void);
+void bar(int);
+
+int main(void)
+{
+	int x = func();
+
+	if (10 < x < 20) // Programcı aslında x değişkeninin değerinin 10 20 aralığında olup olmadığını sorgulamak istemiş.always true   
+		bar(x);
+}
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+int func(void);
+void bar(int);
+
+int main(void)
+{
+	int x = func();
+
+	if (x != 7 || x != 23) //always true or yerine && kullanması gerekirdi.
+		bar(x);
+}
+
+
