@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+	int i = 1;
+	do
+	{
+		printf("%d\n", i);  // Önce 1 yazılır. 
+		i++;                // i nin degeri 1 artırılır(sequnce point olur), i = 2
+		if (i < 15)        // i < 15 oldugu için continue statement'a girer ve while(0) döngüyü 1 kere döndürür.
+			continue;
+	} while (0);
+
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
