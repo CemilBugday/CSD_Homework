@@ -1,0 +1,34 @@
+#include <stdio.h>
+#define TRUE    1
+#define FALSE   0
+
+_Bool isPrime(int num) {
+    if (num > 1) {
+        for (int i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                return FALSE;
+            }
+        }
+        return TRUE;
+    }
+}
+
+int isSuperPrime(int val) {
+    int primeCtr = 1;
+    if (isPrime(val)) {
+        for (int i = 3; i <= val; i++) {
+            if (isPrime(i))
+                primeCtr++;
+        }
+        return primeCtr;
+    }
+    //printf("Girilen sayÄ± asal sayi degildir.\n");
+}
+
+int main()
+{
+    for (int num = 3; num < 1000; num++)
+        isPrime(isSuperPrime(num)) ? printf("%d super asal sayidir\n", num) : printf("%d super asal sayi degildir\n", num);
+
+    return 0;
+}
