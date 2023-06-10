@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    
+    int i, num, x, y, cnt;
+
+    num = 100000;
+
+    for (i = 1; i <= num; ++i) {
+        cnt = 0;
+        for (x = 1; x * x * x < i; x++) 
+            for (y = x; x * x * x + y * y * y <= i; ++y)
+                if (x * x * x + y * y * y == i)
+                    ++cnt;
+        
+        if (cnt == 2) 
+            printf("%d ", i);
+        
+    }
+
+    return 0;
+}
